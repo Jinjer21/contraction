@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+table{
+  width: 100%;
+  margin-top: 16px;
+  border-collapse: collapse;
+
+  thead {
+    th{
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: bold;
+      color: #333;
+      padding: 16px;
+      position: sticky;
+    }
+  }
+
+  tbody{
+    margin: 0;
+    padding: 0;
+  
+    tr{
+      background-color: rgba(255, 255, 255, 0.8);
+      border-bottom: 8px solid #E9F1DF;
+      
+      & td{
+        padding: 16px;
+      }
+    }
+  }
+}
+
+.summary {
+  display: flex;
+  div {
+    background-color: white;
+    padding: 16px;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &:first-of-type{
+      margin-left: 0;
+    }
+
+    &:last-of-type{
+      margin-right: 0;
+    }
+
+    &.alert{
+      background-color: #F1ADBA;
+    }
+
+
+    & label{
+      color: #333;
+      font-weight: bold;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+button{
+  text-transform: uppercase;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+
+  &:hover{
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1),
+                0px 8px 12px rgba(0,0,0,0.05),
+                0px 1px 2px rgba(0,0,0,0.2);
+  }
+
+  &:active{
+    box-shadow: none;
+  }
+
+  &.reset{
+    background-color: #F1ADBA;
+    border: none;
+    padding: 8px;
+    opacity: 0.5;
+
+    &:active{
+      opacity: 1;
+    }
+  }
+
+  &.contraction {
+    font-size: 3em;
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+
+    background-color: #9ff0f3;
+    border: 8px solid white;
+
+    margin-bottom: 16px;
+  
+    &.end{
+      background-color: #F1ADBA;
+    }
+  }
+}
+
