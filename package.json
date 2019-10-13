@@ -2,6 +2,7 @@
   "name": "contraction",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://jackomahony.co.uk/contraction",
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.12",
