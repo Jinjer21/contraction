@@ -78,6 +78,24 @@ table{
   }
 }
 
+.date-meridiem{
+  color: #666;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.timer{
+  display: flex;
+  justify-content: center;
+}
+
+.stopwatch-icon{
+  height: 1em;
+  width: 1em;
+  margin-right: 8px;
+}
+
 button{
   text-transform: uppercase;
   color: white;
