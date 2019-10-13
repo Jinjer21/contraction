@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+}
+
 table{
   width: 100%;
   margin-top: 16px;
@@ -71,6 +76,13 @@ button{
   color: white;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
   cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  justify-self: center;
+  flex: 0 0 auto;
+  align-self: center;
 
   &:hover{
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1),
