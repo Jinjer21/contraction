@@ -107,7 +107,7 @@ const Summary: React.FunctionComponent<{contractions: IContraction[]; recentDiff
   if(contractions.length === 3){
     let startDate = latestContraction.end === undefined ? latestContraction.start : latestContraction.end;
     const allDiff = dateDiffInSeconds(startDate, contractions[2].start);
-    return <>{recentDiffDisplay}<div className={allDiff < 10*60 ? 'all-diff alert' : 'all-diff'}><label>Time for last 3 contractions</label> {formatDuration(allDiff)}</div></>
+    return <>{recentDiffDisplay}<div className={allDiff < 10*60*1000 ? 'all-diff alert' : 'all-diff'}><label>Time for last 3 contractions</label> {formatDuration(allDiff)}</div></>
   } else {
     return recentDiffDisplay;
   }
