@@ -89,7 +89,7 @@ const ContractionListItem: React.FunctionComponent<{contraction: IContraction}> 
       <td>
         <span className="timer">
           {
-            contraction.end === undefined ? <img className="stopwatch-icon" src={stopwatch} /> : null
+            contraction.end === undefined ? <img alt="" className="stopwatch-icon" src={stopwatch} /> : null
           }
             { formatDuration(duration) }
         </span>
@@ -140,7 +140,7 @@ const TimeSinceLastContraction: React.FunctionComponent<{latestContraction: ICon
       <div className={duration.valueOf() > recentDiff ? 'timer alert' : 'timer'}>
         <label>Time since last Contraction</label>
         <span className="timer">
-          <img className="stopwatch-icon" src={stopwatch} />
+          <img alt="" className="stopwatch-icon" src={stopwatch} />
           {formatDuration(duration)}
         </span>
 
