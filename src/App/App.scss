@@ -40,20 +40,27 @@ table{
 
 .summary {
   display: flex;
+  flex-wrap: wrap;
   div {
     background-color: white;
     padding: 16px;
-    margin: 8px;
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 0 0 calc(50% - 4px);
+    max-width: 50%;
+    margin-bottom: 8px;
 
-    &:first-of-type{
-      margin-left: 0;
+    &.timer{
+      flex: 1 0 100%;
+      max-width: 100%;
     }
 
-    &:last-of-type{
-      margin-right: 0;
+    &.recent-diff{
+      margin-right: 4px;
+    }
+
+    &.all-diff{
+      margin-left: 4px;
     }
 
     &.alert{

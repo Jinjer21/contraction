@@ -72,7 +72,7 @@ const ContractionListItem: React.FunctionComponent<{contraction: IContraction}> 
         clearInterval(timer);
       })
 
-    }, [duration, contraction]);
+    }, [contraction]);
 
   return (
     <tr>
@@ -94,12 +94,12 @@ const Summary: React.FunctionComponent<{contractions: IContraction[]}> = ({contr
 
   let recentDiff = dateDiffInSeconds(latestContraction.start, contractions[1].end!);
 
-  const recentDiffDisplay = <div><label>Time between last 2 contractions</label> {formatTime(recentDiff)}</div>
+  const recentDiffDisplay = <div className="recent-diff"><label>Time between last 2 contractions</label> {formatTime(recentDiff)}</div>
       
   if(contractions.length === 3){
     let startDate = latestContraction.end === undefined ? latestContraction.start : latestContraction.end;
     const allDiff = dateDiffInSeconds(startDate, contractions[2].start);
-    return <>{recentDiffDisplay}<div className={allDiff < 10*60 ? 'alert' : undefined}><label>Time for last 3 contractions</label> {formatTime(allDiff)}</div></>
+    return <>{recentDiffDisplay}<div className={allDiff < 10*60 ? 'all-diff alert' : 'all-diff'}><label>Time for last 3 contractions</label> {formatTime(allDiff)}</div></>
   } else {
     return recentDiffDisplay;
   }
@@ -129,7 +129,7 @@ const TimeSinceLastContraction: React.FunctionComponent<{latestContraction: ICon
     return null;
   } else {
     return(
-      <div>
+      <div className="timer">
         <label>Time since last Contraction</label>
         {formatTime(duration)}
         </div>
